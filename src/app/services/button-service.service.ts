@@ -5,12 +5,12 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ButtonService {
-  serverUrl = 'https://localhost:7276/buttons/';
+  serverUrl = 'https://localhost:7276/api/buttons/';
 
   constructor(public http: HttpClient) {}
 
   getAllButtons() {
-    return this.http.get<string[]>(this.serverUrl.concat('Get'));
+    return this.http.get<string[]>(this.serverUrl);
   }
 
   getButtonContent(content: string) {
